@@ -1,3 +1,23 @@
 ---
+import "@/styles/features.css"
+import FeatureItem from '@/components/FeatureItem.astro';
+import featuresData from '../Data/features.json';
 
+const { sectionTitle, features } = featuresData;
 ---
+
+<!-- Features Section -->
+<section class="features">
+    <div class="features-container">
+        <h2 class="section-title">{sectionTitle}</h2>
+        <div class="features-grid">
+            {features.map((feature) => (
+                <FeatureItem
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                />
+            ))}
+        </div>
+    </div>
+</section>

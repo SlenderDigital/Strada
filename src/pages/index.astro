@@ -1,12 +1,13 @@
 ---
-import horizontalLogo from '../assets/strada/horizontal-logo.png';
-import verticalLogo from '../assets/strada/vertical-logo.png';
-import heroSectionImage from '../assets/hero-section-photo.webp';
-import fibraDeVidrio from '@/assets/products/fibra-de-vidrio.png'
-import alambreGalvanizado from '@/assets/products/alambre-galvanizado.png'
-import aluminio from '@/assets/products/aluminio.png'
+import verticalLogo from '@/assets/strada/vertical-logo.png';
 
-import '../styles.css'
+import '@/styles/styles.css'
+import Header from "@/layouts/Header.astro";
+import HeroSection from "@/layouts/HeroSection.astro";
+import Features from "@/layouts/Features.astro";
+import Products from "../layouts/Products.astro";
+import Contact from "../layouts/Contact.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -21,214 +22,22 @@ import '../styles.css'
     </head>
     <body>
         <!-- Header with Navigation -->
-        <header>
-            <div class="nav-container">
-                <div class="logo">
-                    <img src={horizontalLogo.src} alt="Strada Logo" id="logo-image">
-                </div>
-                <nav class="nav-links">
-                    <a href="#home-section">Inicio</a>
-                    <a href="#products-section">Productos</a>
-                    <a href="#contact-section">Contacto</a>
-                </nav>
-                <a href="https://listado.mercadolibre.com.ar/pagina/cbaferrestore/listado/hogar-muebles-jardin/jardin-aire-libre/tejidos-mosquiteros/#client=HOME&component_id=menu_corridors&tracking_id=d3f31530-c413-4378-8cd6-aa992b62cf37"
-                   class="mercado-libre-button" target="_blank">
-                    Mercado Libre
-                </a>
-            </div>
-        </header>
+        <Header></Header>
 
         <!-- Hero Section -->
-        <section class="hero" id="home-section">
-            <div class="hero-text">
-                <h2>Descubre la comodidad de vivir <strong class="message-highlighted">sin mosquitos</strong></h2>
-                <p>Explora nuestro amplio catálogo de telas mosquiteras, desde opciones clásicas hasta innovadoras telas de fibra de vidrio.</p>
-                <a href="#contact-section" class="cta-button">Solicitar Cotización</a>
-            </div>
-            <div class="hero-image">
-                <img src={heroSectionImage.src} alt="Tela Mosquitera">
-            </div>
-        </section>
+        <HeroSection></HeroSection>
 
         <!-- Features Section -->
-        <section class="features">
-            <div class="features-container">
-                <h2 class="section-title">¿Por qué elegir nuestras telas mosquiteras?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">🛡️</div>
-                        <h3 class="feature-title">Alta Durabilidad</h3>
-                        <p>Materiales de primera calidad que aseguran una larga vida útil en cualquier condición climática.</p>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">🔥</div>
-                        <h3 class="feature-title">Resistencia al Fuego</h3>
-                        <p>Nuestras telas mosquiteras son ignífugas, proporcionando mayor seguridad en su hogar.</p>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">💧</div>
-                        <h3 class="feature-title">Impermeabilidad</h3>
-                        <p>Materiales impermeables que resisten la humedad y evitan la formación de moho.</p>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">💵</div>
-                        <h3 class="feature-title">Precios competitivos</h3>
-                        <p>Gracias a procesos optimizados de producción y distribución directos que nos permiten mantener costos bajos y ofrecer precios altamente competitivos.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <Features></Features>
 
         <!-- Products Section -->
-       <section class="products" id="products-section">
-            <h2 class="section-title">Nuestros Productos</h2>
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src={fibraDeVidrio.src} alt="Mosquitera de Fibra de Vidrio" id="product1-image">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-details">
-                            <h3>Mosquitera de Fibra de Vidrio para Ventanas</h3>
-                            <p><strong>Material:</strong> Alambre de fibra de vidrio recubierto de PVC</p>
-                            <p><strong>Tamaño de malla:</strong> 14x14</p>
-                            <p><strong>Tamaño:</strong> Rollos de 1,00 x 25 mts y 1,20 x 25 mts</p>
-                            <p><strong>Color:</strong> Gris</p>
-                            <p><strong>Características:</strong> Impermeable, ignífugo, ligero, buena tenacidad</p>
-                        </div>
-                        <div class="product-link-container">
-                            <a href="https://articulo.mercadolibre.com.ar/MLA-1895213828-rollo-tejido-mosquitero-fiberglass-080-x-25mt-tela-premium-_JM?searchVariation=181498508248#polycard_client=search-nordic&searchVariation=181498508248&position=3&search_layout=grid&type=item&tracking_id=ea3016f9-60ad-4aa4-9f0c-8342b989a1b1" class="product-link" target="_blank">Ver en Mercado Libre</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src={alambreGalvanizado.src} alt="Mosquitera de Alambre Galvanizado" id="product2-image">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-details">
-                            <h3>Mosquitera de Alambre Galvanizado</h3>
-                            <p><strong>Material:</strong> Alambre galvanizado en caliente</p>
-                            <p><strong>Color:</strong> Plateado</p>
-                            <p><strong>Tamaño de malla:</strong> 14x14</p>
-                            <p><strong>Tamaño:</strong> Rollos de 0,80 x 25 mts, 1,00 x 25 mts, 1,20 x 25 mts y 1,50 x 25 mts</p>
-                            <p><strong>Embalaje:</strong> Rollos embalados en cartón, en palets o según necesidades</p>
-                        </div>
-                        <div class="product-link-container">
-                            <a href="https://articulo.mercadolibre.com.ar/MLA-1458413043-tejido-mosquitero-galvanizado-premium-1-metro-rollo-x-25mt-_JM?searchVariation=182094710028#polycard_client=search-nordic&searchVariation=182094710028&position=26&search_layout=grid&type=item&tracking_id=ee410990-c47e-4604-9180-61a10475e06d" class="product-link" target="_blank">Ver en Mercado Libre</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src={aluminio.src} alt="Mosquitera de Aluminio" id="product3-image">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-details">
-                            <h3>Mosquitera de Aluminio</h3>
-                            <p><strong>Material:</strong> Aluminio</p>
-                            <p><strong>Color:</strong> Aluminio natural</p>
-                            <p><strong>Tamaño de malla:</strong> 14x14 x 0,36 mm</p>
-                            <p><strong>Tamaño:</strong> Rollos de 1,00 x 25 mts y 1,20 x 25 mts</p>
-                            <p><strong>Embalaje:</strong> Rollos embalados o según necesidades</p>
-                        </div>
-                        <div class="product-link-container">
-                            <a href="https://articulo.mercadolibre.com.ar/MLA-1163758642-tela-tejido-mosquitero-aluminio-rollo-1m-x-25m-importado-env-_JM?searchVariationTempus%20et%20patientia,%20primum%20ne%20perdere=175749233950#polycard_client=search-nordic&searchVariation=175749233950&position=2&search_layout=stack&type=item&tracking_id=731e4e42-83e0-472d-9d1b-f4a79a7e8f57" class="product-link" target="_blank">Ver en Mercado Libre</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <Products></Products>
 
         <!-- Contact Section -->
-        <section class="contact" id="contact-section">
-            <h2 class="section-title">Contáctenos</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <p><strong>Dirección:</strong> Oficina Central, Argentina</p>
-                    <p><strong>Teléfono:</strong> +54 (XX) XXXX-XXXX</p>
-                    <p><strong>Email:</strong> info@strada.com.ar</p>
-                    <p><strong>Horario de Atención:</strong> Lunes a Viernes de 9:00 a 18:00</p>
-                    <h3 style="margin-top: 2rem;">Mercados Objetivo</h3>
-                    <p>China continental, Oriente Medio, Estados Unidos y Canadá, África, Sudeste Asiático, UE, Rusia, otros países europeos</p>
-                </div>
-
-                <div class="contact-form">
-                    <h3>Solicite una Cotización</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="product">Producto de Interés</label>
-                            <input type="text" id="product">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-button">Enviar Consulta</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+        <Contact></Contact>
 
         <!-- Footer -->
-        <footer>
-            <div class="footer-container">
-                <div>
-                    <div class="footer-logo">
-                        <h2>STRADA</h2>
-                    </div>
-                    <p>Especialistas en tela mosquitera de fibra de vidrio, alambre galvanizado y aluminio para ventanas y puertas.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#home-section">Inicio</a></li>
-                        <li><a href="#products-section">Productos</a></li>
-                        <li><a href="#contact-section">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h3>Productos</h3>
-                    <ul>
-                        <li><a href="#products-section">Mosquitera de Fibra de Vidrio</a></li>
-                        <li><a href="#products-section">Mosquitera de Alambre Galvanizado</a></li>
-                        <li><a href="#products-section">Mosquitera de Aluminio</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 Strada. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        <Footer></Footer>
 
     </body>
 </html>

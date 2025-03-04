@@ -1,0 +1,33 @@
+---
+const {
+    image,
+    alt,
+    title,
+    material,
+    color,
+    meshSize,
+    size,
+    packaging,
+    mercadoLibreLink
+} = Astro.props;
+
+---
+
+<div class="product-card">
+    <div class="product-image">
+        <img src={image} alt={alt} class="w-full h-auto object-cover">
+    </div>
+    <div class="product-info">
+        <div class="product-details">
+            <h3>{title}</h3>
+            <p><strong>Material:</strong> {material}</p>
+            <p><strong>Color:</strong> {color}</p>
+            <p><strong>Tamaño de malla:</strong> {meshSize}</p>
+            <p><strong>Tamaño:</strong> {size}</p>
+            {packaging && <p><strong>Embalaje:</strong> {packaging}</p>}
+        </div>
+        <div class="product-link-container">
+            <a href={mercadoLibreLink} class="product-link" target="_blank">Ver en Mercado Libre</a>
+        </div>
+    </div>
+</div>

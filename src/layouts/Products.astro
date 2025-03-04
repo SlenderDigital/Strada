@@ -1,0 +1,28 @@
+---
+import "@/styles/products.css"
+import ProductItem from '@/components/ProductItem.astro';
+import productsData from '@/data/products.json';
+
+const { sectionTitle, products } = productsData;
+---
+
+<!-- Products Section -->
+<section class="products" id="products-section">
+    <h2 class="section-title">{sectionTitle}</h2>
+    <div class="product-grid">
+        {products.map((product) => (
+            <ProductItem
+                image={product.image}
+                alt={product.alt}
+                title={product.title}
+                material={product.material}
+                color={product.color}
+                meshSize={product.meshSize}
+                size={product.size}
+                packaging={product.packaging}
+                characteristics={product.characteristics}
+                mercadoLibreLink={product.mercadoLibreLink}
+            />
+        ))}
+    </div>
+</section>

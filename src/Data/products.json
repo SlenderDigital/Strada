@@ -1,0 +1,38 @@
+{
+  "sectionTitle": "Nuestros Productos",
+  "products": [
+    {
+      "image": "/src/assets/products/fibra-de-vidrio.png",
+      "alt": "Mosquitera de Fibra de Vidrio",
+      "title": "Mosquitera de Fibra de Vidrio para Ventanas",
+      "material": "Alambre de fibra de vidrio recubierto de PVC",
+      "color": "Gris",
+      "meshSize": "14x14",
+      "size": "Rollos de 1,00 x 25 mts y 1,20 x 25 mts",
+      "characteristics": "Impermeable, ignífugo, ligero, buena tenacidad",
+      "mercadoLibreLink": "https://articulo.mercadolibre.com.ar/MLA-1895213828-rollo-tejido-mosquitero-fiberglass-080-x-25mt-tela-premium-_JM?searchVariation=181498508248#polycard_client=search-nordic&searchVariation=181498508248&position=3&search_layout=grid&type=item&tracking_id=ea3016f9-60ad-4aa4-9f0c-8342b989a1b1"
+    },
+    {
+      "image": "/src/assets/products/alambre-galvanizado.png",
+      "alt": "Mosquitera de Alambre Galvanizado",
+      "title": "Mosquitera de Alambre Galvanizado",
+      "material": "Alambre galvanizado en caliente",
+      "color": "Plateado",
+      "meshSize": "14x14",
+      "size": "Rollos de 0,80 x 25 mts, 1,00 x 25 mts, 1,20 x 25 mts y 1,50 x 25 mts",
+      "packaging": "Rollos embalados en cartón, en palets o según necesidades",
+      "mercadoLibreLink": "https://articulo.mercadolibre.com.ar/MLA-1458413043-tejido-mosquitero-galvanizado-premium-1-metro-rollo-x-25mt-_JM?searchVariation=182094710028#polycard_client=search-nordic&searchVariation=182094710028&position=26&search_layout=grid&type=item&tracking_id=ee410990-c47e-4604-9180-61a10475e06d"
+    },
+    {
+      "image": "/src/assets/products/aluminio.png",
+      "alt": "Mosquitera de Aluminio",
+      "title": "Mosquitera de Aluminio",
+      "material": "Aluminio",
+      "color": "Aluminio natural",
+      "meshSize": "14x14 x 0,36 mm",
+      "size": "Rollos de 1,00 x 25 mts y 1,20 x 25 mts",
+      "packaging": "Rollos embalados o según necesidades",
+      "mercadoLibreLink": "https://articulo.mercadolibre.com.ar/MLA-1163758642-tela-tejido-mosquitero-aluminio-rollo-1m-x-25m-importado-env-_JM?searchVariationTempus%20et%20patientia,%20primum%20ne%20perdere=175749233950#polycard_client=search-nordic&searchVariation=175749233950&position=2&search_layout=stack&type=item&tracking_id=731e4e42-83e0-472d-9d1b-f4a79a7e8f57"
+    }
+  ]
+}

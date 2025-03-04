@@ -1,3 +1,23 @@
 ---
-
+import horizontalLogo from '../assets/strada/horizontal-logo.png';
+import '../styles/header.css';
 ---
+
+
+<!-- Header with Navigation -->
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src={horizontalLogo.src} alt="Strada Logo" id="logo-image">
+        </div>
+        <nav class="nav-links">
+            <a href="#home-section">Inicio</a>
+            <a href="#products-section">Productos</a>
+            <a href="#contact-section">Contacto</a>
+        </nav>
+        <a href="https://listado.mercadolibre.com.ar/pagina/cbaferrestore/listado/hogar-muebles-jardin/jardin-aire-libre/tejidos-mosquiteros/#client=HOME&component_id=menu_corridors&tracking_id=d3f31530-c413-4378-8cd6-aa992b62cf37"
+           class="mercado-libre-button" target="_blank">
+            Mercado Libre
+        </a>
+    </div>
+</header>

@@ -1,8 +1,7 @@
-
-/* Hero section */
+/* Hero section with responsive design */
 .hero {
     background: linear-gradient(-45deg, var(--gold), var(--orange));
-    padding: 8rem 8rem; /* Increased horizontal padding */
+    padding: clamp(2rem, 8vw, 8rem); /* Dynamic padding using clamp */
     text-align: left;
     color: var(--black);
     display: flex;
@@ -16,29 +15,31 @@
     align-items: center;
     justify-content: end;
     max-width: 600px;
-    height: 500px;
     width: 100%;
+    height: auto;
 }
 
 .hero h2 {
     color: var(--black);
-    font-size: 3.7rem; /* Slightly larger */
+    font-size: clamp(2rem, 5vw, 3.7rem); /* Responsive font size */
     margin-bottom: 1rem;
-    font-weight: 900; /* Bolder weight */
+    font-weight: 900;
     line-height: 1.4;
     letter-spacing: -1px;
+    text-align: left;
 }
 
 .hero p {
     color: var(--dark-gray);
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
     max-width: 800px;
     margin: 0 0 2rem;
+    text-align: left;
 }
 
 .hero img {
-    max-width: 80%;
-    height: 100%;
+    max-width: 90%; /* Slightly increased for smaller screens */
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 }
@@ -47,15 +48,50 @@
     display: inline-block;
     background-color: var(--white);
     color: var(--dark-orange);
-    padding: 0.8rem 2rem;
+    padding: clamp(0.5rem, 3vw, 0.8rem) clamp(1rem, 5vw, 2rem); /* Dynamic padding */
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
     border: 2px solid var(--white);
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive button font size */
 }
 
 .cta-button:hover {
     background-color: transparent;
     color: var(--white);
+}
+
+/* Media query for very small screens */
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero > div {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Media query for medium screens */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
 }

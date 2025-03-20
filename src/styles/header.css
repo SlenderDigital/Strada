@@ -1,4 +1,3 @@
-
 /* Header styles */
 header {
     background-color: rgba(255, 255, 255, 0.8);
@@ -10,12 +9,14 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -29,6 +30,7 @@ header {
 .logo img {
     height: 50px;
     margin-right: 10px;
+    transition: height 0.3s ease;
 }
 
 .logo h1 {
@@ -69,4 +71,55 @@ header {
     background-color: var(--white);
     color: var(--black);
     border: 2px solid var(--black);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .mercado-libre-button {
+        display: none; /* Hide Mercado Libre button on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        order: 3;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    header.scrolled {
+        transform: translateY(-40%);
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 35px;
+    }
+
+    header.scrolled .logo img {
+        height: 30px;
+    }
 }

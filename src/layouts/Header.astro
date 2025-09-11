@@ -17,8 +17,30 @@ import '../styles/header.css';
         </nav>
 
         <a href="https://listado.mercadolibre.com.ar/pagina/cbaferrestore/listado/hogar-muebles-jardin/jardin-aire-libre/tejidos-mosquiteros/#client=HOME&component_id=menu_corridors&tracking_id=d3f31530-c413-4378-8cd6-aa992b62cf37"
-           class="mercado-libre-button" target="_blank">
+           id="mercado-libre-button"
+           class="mercado-libre-button"
+           target="_blank">
             Mercado Libre
         </a>
     </div>
 </header>
+
+<script>
+    function toggleMercadoLibreButton() {
+        const mercadoLibreButton = document.getElementById('mercado-libre-button');
+
+        if (!mercadoLibreButton) return;
+
+        if (window.innerWidth <= 768) {
+            mercadoLibreButton.style.display = 'none';
+        } else {
+            mercadoLibreButton.style.display = 'inline-block';
+        }
+    }
+
+    // Initial check
+    toggleMercadoLibreButton();
+
+    // Add resize listener
+    window.addEventListener('resize', toggleMercadoLibreButton);
+</script>

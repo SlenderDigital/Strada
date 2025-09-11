@@ -33,12 +33,6 @@ header {
     transition: height 0.3s ease;
 }
 
-.logo h1 {
-    color: var(--primary);
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -63,7 +57,7 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     border: 2px solid var(--black);
 }
 
@@ -76,50 +70,62 @@ header {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     .nav-container {
-        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
     }
 
     .logo {
-        order: 1;
-    }
-
-    .mercado-libre-button {
-        display: none; /* Hide Mercado Libre button on mobile */
+        margin-bottom: 0.5rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        order: 3;
-        padding: 1rem 0;
+        flex-direction: row;
+        align-items: center;
         gap: 1rem;
-    }
-
-    .nav-links.active {
-        display: flex;
+        margin-bottom: 0.5rem;
     }
 
     .nav-links a {
         padding: 0.5rem 0;
         text-align: center;
+        width: 100%;
     }
 
     header.scrolled {
-        transform: translateY(-40%);
+        transform: translateY(-10%);
     }
 
     .logo img {
         height: 40px;
     }
+
+    .mercado-libre-button {
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .logo img {
-        height: 35px;
+
+    .nav-links {
+        font-size: 0.8rem;
+        gap: 0.75rem;
+        margin-top: 0.4rem;
     }
 
     header.scrolled .logo img {
         height: 30px;
+    }
+}
+
+/* Smooth transitions for mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-container,
+    .logo,
+    .nav-links,
+    .mercado-libre-button {
+        transition: all 0.3s ease;
     }
 }

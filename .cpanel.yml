@@ -2,7 +2,7 @@
 deployment:
   tasks:
     # Set the deployment path (cPanel automatically replaces with your username)
-    - export DEPLOYPATH=/home/$USER/public_html
+    - export DEPLOYPATH=/home/stradasa/public_html
     
     # Install dependencies
     - /usr/local/bin/npm install

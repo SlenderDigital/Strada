@@ -1,0 +1,20 @@
+---
+deployment:
+  tasks:
+    # Set the deployment path (cPanel automatically replaces with your username)
+    - export DEPLOYPATH=/home/$USER/public_html
+    
+    # Install dependencies
+    - /usr/local/bin/npm install
+    
+    # Build the Astro project (generates static files in dist/)
+    - /usr/local/bin/npm run build
+    
+    # Remove all existing files in the deployment directory (clean slate)
+    - /bin/rm -rf $DEPLOYPATH/*
+    
+    # Copy the built static files from dist/ to the web root
+    - /bin/cp -R dist/* $DEPLOYPATH/
+    
+    # Ensure proper permissions for web files
+    - /bin/chmod -R 755 $DEPLOYPATH
